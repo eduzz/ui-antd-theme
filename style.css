@@ -1,0 +1,112 @@
+:root {
+  --eduzz-ui-antd-theme-border-radius: 4px;
+  --eduzz-ui-antd-theme-primary: #0d47a1;
+  --eduzz-ui-antd-theme-primary-hover: #2a63ad;
+  --eduzz-ui-antd-theme-split-color: rgba(5, 5, 5, 0.06);
+}
+
+/* fix search input height */
+.ant-input-search-large>.ant-input-group>.ant-input {
+  height: 40px;
+}
+
+/* workaround for Modal.confirm */
+.ant-modal .ant-modal-content {
+  border-radius: var(--eduzz-ui-antd-theme-border-radius);
+}
+
+.ant-modal-confirm-btns .ant-btn-default {
+  height: 40px;
+  border-radius: var(--eduzz-ui-antd-theme-border-radius);
+}
+
+.ant-modal-confirm-btns .ant-btn-default:hover,
+.ant-modal-confirm-btns .ant-btn-default:focus,
+.ant-modal-confirm-btns .ant-btn-default:active {
+  border-color: var(--eduzz-ui-antd-theme-primary-hover);
+  color: var(--eduzz-ui-antd-theme-primary);
+}
+
+
+.ant-modal-confirm-btns .ant-btn-primary {
+  background-color: var(--eduzz-ui-antd-theme-primary);
+  height: 40px;
+  border-radius: var(--eduzz-ui-antd-theme-border-radius);
+}
+
+.ant-modal-confirm-btns .ant-btn-primary:hover,
+.ant-modal-confirm-btns .ant-btn-primary:focus,
+.ant-modal-confirm-btns .ant-btn-primary:active {
+  background-color: var(--eduzz-ui-antd-theme-primary-hover);
+}
+
+
+
+/* fix forms */
+.ant-form-vertical .ant-form-item-label,
+.ant-col-24.ant-form-item-label {
+  padding-bottom: 2px;
+}
+
+.ant-col-24.ant-form-item-label>label {
+  height: auto;
+}
+
+.ant-select {
+  width: 100%;
+}
+
+.ant-space {
+  display: flex;
+}
+
+/* fix empty image with icon */
+.ant-empty-image {
+  height: 80px !important;
+}
+
+.ant-empty-image .anticon {
+  font-size: 70px;
+}
+
+/* table config  */
+.ant-table table {
+  border: 1px solid var(--eduzz-ui-antd-theme-split-color);
+}
+
+/* add blur to modal */
+.ant-modal-mask,
+.ant-image-preview-mask {
+  backdrop-filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(0.5rem);
+}
+
+.ant-modal {
+  transform: none !important;
+}
+
+.ant-modal-mask.ant-fade-leave {
+  pointer-events: none;
+}
+
+.ant-modal-mask.ant-fade-leave+.ant-modal-wrap {
+  pointer-events: none;
+}
+
+.ant-wave {
+  display: none;
+}
+
+/* fix avatar inside of a button  */
+.ant-btn>.ant-avatar {
+  vertical-align: text-bottom;
+  margin-right: 5px;
+}
+
+.ant-tooltip {
+  pointer-events: none;
+}
+
+.ant-tooltip .ant-tooltip-inner {
+  box-shadow: none;
+}
