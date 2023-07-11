@@ -40,8 +40,6 @@
   background-color: var(--eduzz-ui-antd-theme-primary-hover);
 }
 
-
-
 /* fix forms */
 .ant-form-vertical .ant-form-item-label,
 .ant-col-24.ant-form-item-label {

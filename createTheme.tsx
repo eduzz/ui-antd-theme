@@ -23,8 +23,11 @@ export default function createTheme(primaryColor: BrandColor | `#${string}`, mod
 }
 
 function removeUndef(theme: NonNullable<AntdThemeConfig['token']>): AntdThemeConfig['token'] {
-  return Object.keys(theme).reduce((acc, key) => {
-    if ((theme as any)[key] === undefined) return acc;
-    return { ...acc, [key]: (theme as any)[key] };
-  }, {} as typeof theme);
+  return Object.keys(theme).reduce(
+    (acc, key) => {
+      if ((theme as any)[key] === undefined) return acc;
+      return { ...acc, [key]: (theme as any)[key] };
+    },
+    {} as typeof theme
+  );
 }
