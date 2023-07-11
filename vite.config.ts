@@ -9,6 +9,7 @@ import dts from 'vite-plugin-dts';
 export default defineConfig({
   build: {
     outDir: '.',
+    cssCodeSplit: true,
     sourcemap: true,
     lib: {
       entry: './index.tsx',
@@ -25,5 +26,12 @@ export default defineConfig({
       }
     }
   },
-  plugins: [react(), cssInjectedByJsPlugin({ topExecutionPriority: true }), dts({ copyDtsFiles: true })]
+  plugins: [
+    react(),
+    cssInjectedByJsPlugin({
+      topExecutionPriority: true,
+      relativeCSSInjection: true
+    }),
+    dts({ copyDtsFiles: true })
+  ]
 });

@@ -1,3 +1,4 @@
+import './style.css';
 import { ReactNode, useMemo } from 'react';
 
 import { App, ConfigProvider } from 'antd';

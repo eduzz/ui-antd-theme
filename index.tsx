@@ -1,5 +1,3 @@
-import './style.css';
-
 import * as appBinder from './App';
 import ThemeProviderComponent from './ThemeProvider';
 
