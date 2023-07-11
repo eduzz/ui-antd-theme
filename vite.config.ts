@@ -1,3 +1,5 @@
+import path from 'path';
+
 import react from '@vitejs/plugin-react-swc';
 import { defineConfig } from 'vite';
 import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
@@ -15,11 +17,9 @@ export default defineConfig({
       fileName: format => `ui-antd-theme.${format}.js`
     },
     rollupOptions: {
-      external: [/node_modules/],
+      external: id => !id.startsWith('.') && !path.isAbsolute(id),
       output: {
         preserveModules: true,
-        preserveModulesRoot: '.',
-        inlineDynamicImports: false,
         entryFileNames: ({ name: fileName }) => `${fileName}.js`,
         exports: 'named'
       }
