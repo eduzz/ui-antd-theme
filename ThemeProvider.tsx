@@ -1,5 +1,5 @@
 import './style.css';
-import { ReactNode, useMemo } from 'react';
+import { ReactNode, useEffect, useMemo, useState } from 'react';
 
 import { App, ConfigProvider } from 'antd';
 import type { ConfigProviderProps } from 'antd/es/config-provider';
@@ -9,16 +9,36 @@ import AppBinder from './App';
 import createTheme, { BrandColor } from './createTheme';
 import CssVariables from './CssVariables';
 
+const mediaDark =
+  typeof window !== 'undefined' && window?.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+
 export interface ThemeProviderProps extends Omit<ConfigProviderProps, 'theme' | 'children' | 'componentSize'> {
   brandColor: BrandColor | `#${string}`;
-  mode?: 'dark' | 'light';
+  mode?: 'dark' | 'light' | 'system';
   children: ReactNode;
 }
 
-const ThemeProvider = ({ brandColor, mode, children, ...configProps }: ThemeProviderProps) => {
+const ThemeProvider = ({ brandColor, mode: modeProp = 'light', children, ...configProps }: ThemeProviderProps) => {
+  const [mode, setMode] = useState<'light' | 'dark'>(() => {
+    if (modeProp !== 'system') {
+      return modeProp;
+    }
+
+    return mediaDark?.matches ? 'dark' : 'light';
+  });
+
   const theme = useMemo(() => {
     return createTheme(brandColor, mode ?? 'light');
   }, [mode, brandColor]);
+
+  useEffect(() => {
+    if (modeProp !== 'system') return setMode(modeProp ?? 'light');
+    if (!mediaDark) return setMode('light');
+
+    const listner = (event: MediaQueryListEvent) => setMode(() => (event.matches ? 'dark' : 'light'));
+    mediaDark.addEventListener('change', listner);
+    return () => mediaDark.removeEventListener('change', listner);
+  }, [modeProp]);
 
   return (
     <ConfigProvider theme={theme} componentSize='large' locale={antdLocalePtBR} {...configProps}>
