@@ -18,7 +18,7 @@ export interface ThemeProviderProps extends Omit<ConfigProviderProps, 'theme' | 
 const ThemeProvider = ({ brandColor, mode, children, ...configProps }: ThemeProviderProps) => {
   const theme = useMemo(() => {
     return createTheme(brandColor, mode ?? 'light');
-  }, []);
+  }, [mode, brandColor]);
 
   return (
     <ConfigProvider theme={theme} componentSize='large' locale={antdLocalePtBR} {...configProps}>
