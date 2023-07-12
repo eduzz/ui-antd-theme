@@ -3,6 +3,7 @@
   --eduzz-ui-antd-theme-primary: #0d47a1;
   --eduzz-ui-antd-theme-primary-hover: #2a63ad;
   --eduzz-ui-antd-theme-split-color: rgba(5, 5, 5, 0.06);
+  --eduzz-ui-antd-theme-bg-color: #fff;
 }
 
 /* fix search input height */

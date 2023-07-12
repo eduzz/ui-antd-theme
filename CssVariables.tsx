@@ -12,7 +12,7 @@ export interface CssVariablesProps {
 }
 
 const CssVariables = ({ brandColor }: CssVariablesProps) => {
-  const tokens = theme.useToken();
+  const { token } = theme.useToken();
 
   const secondaryColor = useMemo(() => {
     return brandColor.startsWith('#') ? brandColor : eduzzTokens.brands[brandColor as BrandColor].secondary.pure;
@@ -21,18 +21,19 @@ const CssVariables = ({ brandColor }: CssVariablesProps) => {
   const cssVars = useMemo(
     () => `
       :root {
-        --eduzz-theme-primary: ${tokens.token.colorPrimary};
-        --eduzz-theme-primary-rgb: ${hexToRgbVar(tokens.token.colorPrimary) ?? '13, 38, 115'};
+        --eduzz-theme-primary: ${token.colorPrimary};
+        --eduzz-theme-primary-rgb: ${hexToRgbVar(token.colorPrimary) ?? '13, 38, 115'};
         --eduzz-theme-secondary: ${secondaryColor};
         --eduzz-theme-secondary-rgb: ${hexToRgbVar(secondaryColor)};
 
-        --eduzz-ui-antd-theme-border-radius: ${tokens.token.borderRadius};
-        --eduzz-ui-antd-theme-primary: ${tokens.token.colorPrimary};
-        --eduzz-ui-antd-theme-primary-hover: ${tokens.token.colorPrimaryHover};
-        --eduzz-ui-antd-theme-split-color: ${tokens.token.colorSplit};
+        --eduzz-ui-antd-theme-border-radius: ${token.borderRadius};
+        --eduzz-ui-antd-theme-primary: ${token.colorPrimary};
+        --eduzz-ui-antd-theme-primary-hover: ${token.colorPrimaryHover};
+        --eduzz-ui-antd-theme-split-color: ${token.colorSplit};
+        --eduzz-ui-antd-theme-bg-color: ${token.colorBgLayout};
       }
     `,
-    [tokens.token]
+    [token]
   );
 
   return <style>{cssVars}</style>;

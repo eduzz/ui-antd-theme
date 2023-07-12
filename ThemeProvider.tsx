@@ -28,6 +28,9 @@ const ThemeProvider = ({ brandColor, mode: modeProp = 'light', children, ...conf
   });
 
   const theme = useMemo(() => {
+    document.body.classList.remove('eduzz-ui-light-theme', 'eduzz-ui-dark-theme');
+    document.body.classList.add(`eduzz-ui-${mode}-theme`);
+
     return createTheme(brandColor, mode ?? 'light');
   }, [mode, brandColor]);
 
