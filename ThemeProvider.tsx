@@ -1,4 +1,5 @@
 import './style.css';
+
 import { ReactNode, useEffect, useMemo, useState } from 'react';
 
 import { App, ConfigProvider } from 'antd';
@@ -7,6 +8,7 @@ import antdLocalePtBR from 'antd/locale/pt_BR';
 
 import AppBinder from './App';
 import createTheme, { BrandColor } from './createTheme';
+import CssReset from './CssReset';
 import CssVariables from './CssVariables';
 
 const mediaDark =
@@ -16,9 +18,16 @@ export interface ThemeProviderProps extends Omit<ConfigProviderProps, 'theme' | 
   brandColor: BrandColor | `#${string}`;
   mode?: 'dark' | 'light' | 'system';
   children: ReactNode;
+  disableResetCss?: boolean;
 }
 
-const ThemeProvider = ({ brandColor, mode: modeProp = 'light', children, ...configProps }: ThemeProviderProps) => {
+const ThemeProvider = ({
+  brandColor,
+  mode: modeProp = 'light',
+  disableResetCss,
+  children,
+  ...configProps
+}: ThemeProviderProps) => {
   const [mode, setMode] = useState<'light' | 'dark'>(() => {
     if (modeProp !== 'system') {
       return modeProp;
@@ -47,6 +56,7 @@ const ThemeProvider = ({ brandColor, mode: modeProp = 'light', children, ...conf
     <ConfigProvider theme={theme} componentSize='large' locale={antdLocalePtBR} {...configProps}>
       <App>
         <AppBinder />
+        {!disableResetCss && <CssReset />}
         <CssVariables brandColor={brandColor} />
         {children}
       </App>

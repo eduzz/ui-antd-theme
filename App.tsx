@@ -1,4 +1,4 @@
-import { App as AntdApp, theme } from 'antd';
+import { App as AntdApp } from 'antd';
 import type { MessageInstance } from 'antd/es/message/interface';
 import type { ModalStaticFunctions } from 'antd/es/modal/confirm';
 import type { NotificationInstance } from 'antd/es/notification/interface';
@@ -8,8 +8,6 @@ export let notification: NotificationInstance;
 export let modal: Omit<ModalStaticFunctions, 'warn'>;
 
 const AppBinder = () => {
-  const tokens = theme.useToken();
-  console.log({ tokens });
   const staticFunction = AntdApp.useApp();
 
   message = staticFunction.message;
