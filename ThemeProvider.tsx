@@ -6,7 +6,7 @@ import { App, ConfigProvider } from 'antd';
 import type { ConfigProviderProps } from 'antd/es/config-provider';
 import antdLocalePtBR from 'antd/locale/pt_BR';
 
-import AppBinder from './App';
+import { AppBinder } from '.';
 import createTheme, { BrandColor } from './createTheme';
 import CssReset from './CssReset';
 import CssVariables from './CssVariables';

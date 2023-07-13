@@ -7,7 +7,7 @@ export let message: MessageInstance;
 export let notification: NotificationInstance;
 export let modal: Omit<ModalStaticFunctions, 'warn'>;
 
-const AppBinder = () => {
+export const AppBinder = () => {
   const staticFunction = AntdApp.useApp();
 
   message = staticFunction.message;
@@ -16,5 +16,3 @@ const AppBinder = () => {
 
   return <></>;
 };
-
-export default AppBinder;

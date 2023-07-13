@@ -1,7 +1,22 @@
-import * as appBinder from './App';
+import { App as AntdApp } from 'antd';
+import type { MessageInstance } from 'antd/es/message/interface';
+import type { ModalStaticFunctions } from 'antd/es/modal/confirm';
+import type { NotificationInstance } from 'antd/es/notification/interface';
+
 import ThemeProviderComponent from './ThemeProvider';
 
 export const ThemeProvider = ThemeProviderComponent;
-export const notification = appBinder.notification;
-export const message = appBinder.message;
-export const modal = appBinder.modal;
+
+export let message: MessageInstance;
+export let notification: NotificationInstance;
+export let modal: Omit<ModalStaticFunctions, 'warn'>;
+
+export const AppBinder = () => {
+  const staticFunction = AntdApp.useApp();
+
+  message = staticFunction.message;
+  modal = staticFunction.modal;
+  notification = staticFunction.notification;
+
+  return <></>;
+};
