@@ -26,7 +26,7 @@ const CssVariables = ({ brandColor }: CssVariablesProps) => {
         --eduzz-theme-secondary: ${secondaryColor};
         --eduzz-theme-secondary-rgb: ${hexToRgbVar(secondaryColor)};
 
-        --eduzz-ui-antd-theme-border-radius: ${token.borderRadius};
+        --eduzz-ui-antd-theme-border-radius: ${token.borderRadius}px;
         --eduzz-ui-antd-theme-primary: ${token.colorPrimary};
         --eduzz-ui-antd-theme-primary-hover: ${token.colorPrimaryHover};
         --eduzz-ui-antd-theme-split-color: ${token.colorSplit};
