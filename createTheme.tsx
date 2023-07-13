@@ -5,11 +5,15 @@ import tokens from '@eduzz/ui-tokens';
 
 export type BrandColor = keyof typeof tokens.brands;
 
-export default function createTheme(primaryColor: BrandColor | `#${string}`, mode: 'dark' | 'light'): AntdThemeConfig {
+export default function createTheme(
+  primaryColor: BrandColor | `#${string}`,
+  mode: 'dark' | 'light',
+  motion: boolean
+): AntdThemeConfig {
   return {
     algorithm: mode == 'dark' ? [theme.darkAlgorithm] : [],
     token: removeUndef({
-      motion: false,
+      motion,
       colorPrimary: primaryColor.startsWith('#')
         ? primaryColor
         : tokens.brands[primaryColor as BrandColor].primary.pure,

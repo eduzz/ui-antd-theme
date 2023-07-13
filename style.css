@@ -80,22 +80,6 @@
   -webkit-backdrop-filter: blur(0.5rem);
 }
 
-.ant-modal {
-  transform: none !important;
-}
-
-.ant-modal-mask.ant-fade-leave {
-  pointer-events: none;
-}
-
-.ant-modal-mask.ant-fade-leave+.ant-modal-wrap {
-  pointer-events: none;
-}
-
-.ant-wave {
-  display: none;
-}
-
 /* fix avatar inside of a button  */
 .ant-btn>.ant-avatar {
   vertical-align: text-bottom;
@@ -108,4 +92,21 @@
 
 .ant-tooltip .ant-tooltip-inner {
   box-shadow: none;
+}
+
+/* disable animation */
+.eduzz-ui-disable-animation .ant-wave {
+  display: none;
+}
+
+.eduzz-ui-disable-animation .ant-modal {
+  transform: none !important;
+}
+
+.eduzz-ui-disable-animation .ant-modal-mask.ant-fade-leave {
+  pointer-events: none;
+}
+
+.eduzz-ui-disable-animation .ant-modal-mask.ant-fade-leave+.ant-modal-wrap {
+  pointer-events: none;
 }

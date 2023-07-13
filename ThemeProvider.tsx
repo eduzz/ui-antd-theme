@@ -19,11 +19,13 @@ export interface ThemeProviderProps extends Omit<ConfigProviderProps, 'theme' | 
   mode?: 'dark' | 'light' | 'system';
   children: ReactNode;
   disableResetCss?: boolean;
+  enableAnimation?: boolean;
 }
 
 const ThemeProvider = ({
   brandColor,
   mode: modeProp = 'light',
+  enableAnimation,
   disableResetCss,
   children,
   ...configProps
@@ -37,11 +39,12 @@ const ThemeProvider = ({
   });
 
   const theme = useMemo(() => {
-    document.body.classList.remove('eduzz-ui-light-theme', 'eduzz-ui-dark-theme');
+    document.body.classList.remove('eduzz-ui-disable-animation', 'eduzz-ui-light-theme', 'eduzz-ui-dark-theme');
     document.body.classList.add(`eduzz-ui-${mode}-theme`);
+    !enableAnimation && document.body.classList.add('eduzz-ui-disable-animation');
 
-    return createTheme(brandColor, mode ?? 'light');
-  }, [mode, brandColor]);
+    return createTheme(brandColor, mode ?? 'light', enableAnimation ?? false);
+  }, [mode, brandColor, enableAnimation]);
 
   useEffect(() => {
     if (modeProp !== 'system') return setMode(modeProp ?? 'light');
