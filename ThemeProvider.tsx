@@ -15,6 +15,7 @@ const mediaDark =
 
 export interface ThemeProviderProps extends Omit<ConfigProviderProps, 'theme' | 'children' | 'componentSize'> {
   brandColor: BrandColor | `#${string}`;
+  brandColorDark?: BrandColor | `#${string}`;
   mode?: 'dark' | 'light' | 'system';
   children: ReactNode;
   enableAnimation?: boolean;
@@ -22,6 +23,7 @@ export interface ThemeProviderProps extends Omit<ConfigProviderProps, 'theme' | 
 
 const ThemeProvider = ({
   brandColor,
+  brandColorDark,
   mode: modeProp = 'light',
   enableAnimation,
   children,
@@ -40,7 +42,11 @@ const ThemeProvider = ({
     document.body.classList.add(`eduzz-ui-${mode}-theme`);
     !enableAnimation && document.body.classList.add('eduzz-ui-disable-animation');
 
-    return createTheme(brandColor, mode ?? 'light', enableAnimation ?? false);
+    return createTheme(
+      mode === 'light' ? brandColor : brandColorDark ?? brandColor,
+      mode ?? 'light',
+      enableAnimation ?? false
+    );
   }, [mode, brandColor, enableAnimation]);
 
   useEffect(() => {
