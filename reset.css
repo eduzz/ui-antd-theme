@@ -1,1 +1,152 @@
-html,body{background-color:var(--eduzz-ui-antd-theme-bg-color)!important}*,*:before,*:after{box-sizing:border-box}a:any-link{text-decoration:none}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,menu,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,main,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border-width:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section{display:block}*[hidden]{display:none}body{line-height:1;font-family:Albert Sans,sans-serif}menu,ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:"";content:none}table{border-collapse:collapse;border-spacing:0}
+body.--eduzz-ui-antd-theme-reset *,
+body.--eduzz-ui-antd-theme-reset *:before,
+body.--eduzz-ui-antd-theme-reset *:after {
+  box-sizing: border-box
+}
+
+body.--eduzz-ui-antd-theme-reset a:any-link {
+  text-decoration: none
+}
+
+html.--eduzz-ui-antd-theme-reset,
+body.--eduzz-ui-antd-theme-reset,
+body.--eduzz-ui-antd-theme-reset div,
+body.--eduzz-ui-antd-theme-reset span,
+body.--eduzz-ui-antd-theme-reset applet,
+body.--eduzz-ui-antd-theme-reset object,
+body.--eduzz-ui-antd-theme-reset iframe,
+body.--eduzz-ui-antd-theme-reset h1,
+body.--eduzz-ui-antd-theme-reset h2,
+body.--eduzz-ui-antd-theme-reset h3,
+body.--eduzz-ui-antd-theme-reset h4,
+body.--eduzz-ui-antd-theme-reset h5,
+body.--eduzz-ui-antd-theme-reset h6,
+body.--eduzz-ui-antd-theme-reset p,
+body.--eduzz-ui-antd-theme-reset blockquote,
+body.--eduzz-ui-antd-theme-reset pre,
+body.--eduzz-ui-antd-theme-reset a,
+body.--eduzz-ui-antd-theme-reset abbr,
+body.--eduzz-ui-antd-theme-reset acronym,
+body.--eduzz-ui-antd-theme-reset address,
+body.--eduzz-ui-antd-theme-reset big,
+body.--eduzz-ui-antd-theme-reset cite,
+body.--eduzz-ui-antd-theme-reset code,
+body.--eduzz-ui-antd-theme-reset del,
+body.--eduzz-ui-antd-theme-reset dfn,
+body.--eduzz-ui-antd-theme-reset em,
+body.--eduzz-ui-antd-theme-reset img,
+body.--eduzz-ui-antd-theme-reset ins,
+body.--eduzz-ui-antd-theme-reset kbd,
+body.--eduzz-ui-antd-theme-reset q,
+body.--eduzz-ui-antd-theme-reset s,
+body.--eduzz-ui-antd-theme-reset samp,
+body.--eduzz-ui-antd-theme-reset small,
+body.--eduzz-ui-antd-theme-reset strike,
+body.--eduzz-ui-antd-theme-reset strong,
+body.--eduzz-ui-antd-theme-reset sub,
+body.--eduzz-ui-antd-theme-reset sup,
+body.--eduzz-ui-antd-theme-reset tt,
+body.--eduzz-ui-antd-theme-reset var,
+body.--eduzz-ui-antd-theme-reset b,
+body.--eduzz-ui-antd-theme-reset u,
+body.--eduzz-ui-antd-theme-reset i,
+body.--eduzz-ui-antd-theme-reset center,
+body.--eduzz-ui-antd-theme-reset dl,
+body.--eduzz-ui-antd-theme-reset dt,
+body.--eduzz-ui-antd-theme-reset dd,
+body.--eduzz-ui-antd-theme-reset menu,
+body.--eduzz-ui-antd-theme-reset ol,
+body.--eduzz-ui-antd-theme-reset ul,
+body.--eduzz-ui-antd-theme-reset li,
+body.--eduzz-ui-antd-theme-reset fieldset,
+body.--eduzz-ui-antd-theme-reset form,
+body.--eduzz-ui-antd-theme-reset label,
+body.--eduzz-ui-antd-theme-reset legend,
+body.--eduzz-ui-antd-theme-reset table,
+body.--eduzz-ui-antd-theme-reset caption,
+body.--eduzz-ui-antd-theme-reset tbody,
+body.--eduzz-ui-antd-theme-reset tfoot,
+body.--eduzz-ui-antd-theme-reset thead,
+body.--eduzz-ui-antd-theme-reset tr,
+body.--eduzz-ui-antd-theme-reset th,
+body.--eduzz-ui-antd-theme-reset td,
+body.--eduzz-ui-antd-theme-reset article,
+body.--eduzz-ui-antd-theme-reset aside,
+body.--eduzz-ui-antd-theme-reset canvas,
+body.--eduzz-ui-antd-theme-reset details,
+body.--eduzz-ui-antd-theme-reset embed,
+body.--eduzz-ui-antd-theme-reset figure,
+body.--eduzz-ui-antd-theme-reset figcaption,
+body.--eduzz-ui-antd-theme-reset footer,
+body.--eduzz-ui-antd-theme-reset header,
+body.--eduzz-ui-antd-theme-reset hgroup,
+body.--eduzz-ui-antd-theme-reset main,
+body.--eduzz-ui-antd-theme-reset nav,
+body.--eduzz-ui-antd-theme-reset output,
+body.--eduzz-ui-antd-theme-reset ruby,
+body.--eduzz-ui-antd-theme-reset section,
+body.--eduzz-ui-antd-theme-reset summary,
+body.--eduzz-ui-antd-theme-reset time,
+body.--eduzz-ui-antd-theme-reset mark,
+body.--eduzz-ui-antd-theme-reset audio,
+body.--eduzz-ui-antd-theme-reset video {
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline
+}
+
+body.--eduzz-ui-antd-theme-reset td,
+body.--eduzz-ui-antd-theme-reset th {
+  vertical-align: middle;
+}
+
+body.--eduzz-ui-antd-theme-reset article,
+body.--eduzz-ui-antd-theme-reset aside,
+body.--eduzz-ui-antd-theme-reset details,
+body.--eduzz-ui-antd-theme-reset figcaption,
+body.--eduzz-ui-antd-theme-reset figure,
+body.--eduzz-ui-antd-theme-reset footer,
+body.--eduzz-ui-antd-theme-reset header,
+body.--eduzz-ui-antd-theme-reset hgroup,
+body.--eduzz-ui-antd-theme-reset main,
+body.--eduzz-ui-antd-theme-reset menu,
+body.--eduzz-ui-antd-theme-reset nav,
+body.--eduzz-ui-antd-theme-reset section {
+  display: block
+}
+
+body.--eduzz-ui-antd-theme-reset *[hidden] {
+  display: none
+}
+
+body.--eduzz-ui-antd-theme-reset {
+  line-height: 1;
+  font-family: Albert Sans, sans-serif
+}
+
+body.--eduzz-ui-antd-theme-reset menu,
+body.--eduzz-ui-antd-theme-reset ol,
+body.--eduzz-ui-antd-theme-reset ul {
+  list-style: none
+}
+
+body.--eduzz-ui-antd-theme-reset blockquote,
+body.--eduzz-ui-antd-theme-reset q {
+  quotes: none
+}
+
+body.--eduzz-ui-antd-theme-reset blockquote:before,
+body.--eduzz-ui-antd-theme-reset blockquote:after,
+body.--eduzz-ui-antd-theme-reset q:before,
+body.--eduzz-ui-antd-theme-reset q:after {
+  content: "";
+  content: none
+}
+
+body.--eduzz-ui-antd-theme-reset table {
+  border-collapse: collapse;
+  border-spacing: 0
+}

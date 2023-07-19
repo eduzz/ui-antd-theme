@@ -6,6 +6,11 @@
   --eduzz-ui-antd-theme-bg-color: #fff;
 }
 
+html,
+body {
+  background-color: var(--eduzz-ui-antd-theme-bg-color) !important
+}
+
 /* fix search input height */
 .ant-input-search-large>.ant-input-group>.ant-input {
   height: 40px;
@@ -28,16 +33,15 @@
   color: var(--eduzz-ui-antd-theme-primary);
 }
 
-
-.ant-modal-confirm-btns .ant-btn-primary {
+.ant-modal-confirm-btns .ant-btn-primary:not(.ant-btn-dangerous) {
   background-color: var(--eduzz-ui-antd-theme-primary);
   height: 40px;
   border-radius: var(--eduzz-ui-antd-theme-border-radius);
 }
 
-.ant-modal-confirm-btns .ant-btn-primary:hover,
-.ant-modal-confirm-btns .ant-btn-primary:focus,
-.ant-modal-confirm-btns .ant-btn-primary:active {
+.ant-modal-confirm-btns .ant-btn-primary:not(.ant-btn-dangerous):hover,
+.ant-modal-confirm-btns .ant-btn-primary:not(.ant-btn-dangerous):focus,
+.ant-modal-confirm-btns .ant-btn-primary:not(.ant-btn-dangerous):active {
   background-color: var(--eduzz-ui-antd-theme-primary-hover);
 }
 
