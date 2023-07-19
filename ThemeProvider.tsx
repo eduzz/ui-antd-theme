@@ -8,7 +8,6 @@ import antdLocalePtBR from 'antd/locale/pt_BR';
 
 import { AppBinder } from '.';
 import createTheme, { BrandColor } from './createTheme';
-import CssReset from './CssReset';
 import CssVariables from './CssVariables';
 
 const mediaDark =
@@ -18,7 +17,6 @@ export interface ThemeProviderProps extends Omit<ConfigProviderProps, 'theme' | 
   brandColor: BrandColor | `#${string}`;
   mode?: 'dark' | 'light' | 'system';
   children: ReactNode;
-  disableResetCss?: boolean;
   enableAnimation?: boolean;
 }
 
@@ -26,7 +24,6 @@ const ThemeProvider = ({
   brandColor,
   mode: modeProp = 'light',
   enableAnimation,
-  disableResetCss,
   children,
   ...configProps
 }: ThemeProviderProps) => {
@@ -59,7 +56,6 @@ const ThemeProvider = ({
     <ConfigProvider theme={theme} componentSize='large' locale={antdLocalePtBR} {...configProps}>
       <App>
         <AppBinder />
-        {!disableResetCss && <CssReset />}
         <CssVariables brandColor={brandColor} />
         {children}
       </App>

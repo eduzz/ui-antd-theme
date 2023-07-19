@@ -1,3 +1,5 @@
+@import 'antd/dist/reset.css';
+
 :root {
   --eduzz-ui-antd-theme-border-radius: 4px;
   --eduzz-ui-antd-theme-primary: #0d47a1;
