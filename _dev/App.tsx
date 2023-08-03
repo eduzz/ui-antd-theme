@@ -1,11 +1,22 @@
-import { Button } from 'antd';
+import { Button, Form, Input } from 'antd';
 
 import { ThemeProvider } from '..';
 
 function App() {
   return (
     <ThemeProvider brandColor='orbita'>
-      <Button>Teste</Button>
+      <div style={{ padding: 12 }}>
+        <Form layout='vertical'>
+          <Form.Item label='Teste'>
+            <Input />
+          </Form.Item>
+
+          <Form.Item label='Teste'>
+            <Input />
+          </Form.Item>
+        </Form>
+        <Button>Teste</Button>
+      </div>
     </ThemeProvider>
   );
 }

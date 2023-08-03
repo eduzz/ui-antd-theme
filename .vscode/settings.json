@@ -56,5 +56,6 @@
     "**/vendor/**": true,
     ".docker-data": true,
     "tsconfig.tsbuildinfo": true
-  }
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

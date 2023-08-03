@@ -20,8 +20,8 @@ export default function createTheme(
       colorBgLayout: mode === 'light' ? '#fcfcfc' : undefined,
       colorBgTextHover: mode === 'light' ? 'rgba(0, 0, 0, 0.03)' : undefined,
       fontFamily: tokens.font.family.base,
-      fontSize: 14,
-      borderRadius: 4
+      fontSize: 16,
+      borderRadius: 0
     })
   };
 }
