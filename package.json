@@ -1,7 +1,7 @@
 {
   "name": "@eduzz/ui-antd-theme",
   "description": "Eduzz Hooks: Antd Theme",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "keywords": [
     "antd",
     "raect-hooks-forms",
@@ -31,21 +31,21 @@
     "update-deps": "yarn ncu -u"
   },
   "dependencies": {
+    "antd": "^5",
     "@eduzz/ui-tokens": "^1"
   },
   "peerDependencies": {
-    "antd": "^5"
+    "antd": "^5",
+    "@eduzz/ui-tokens": "^1"
   },
   "devDependencies": {
     "@eduzz/eslint-config": "^1.0.0",
-    "@types/lodash-es": "^4",
     "@types/node": "^20.4.6",
     "@types/react-dom": "^18.2.6",
     "@types/react": "^18.2.14",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "@vitejs/plugin-react-swc": "^3.3.2",
-    "antd": "^5",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-eslint-plugin": "^5.1.0",
     "eslint-plugin-import": "^2.27.5",
