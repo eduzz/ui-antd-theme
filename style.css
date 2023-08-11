@@ -116,3 +116,8 @@ body {
 .eduzz-ui-disable-animation .ant-modal-mask.ant-fade-leave+.ant-modal-wrap {
   pointer-events: none;
 }
+
+/* fix icon align */
+.ant-btn .ant-btn-icon {
+  vertical-align: text-bottom;
+}
