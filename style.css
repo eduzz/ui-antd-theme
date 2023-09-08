@@ -81,7 +81,8 @@ body {
 
 /* add blur to modal */
 .ant-modal-mask,
-.ant-image-preview-mask {
+.ant-image-preview-mask,
+.ant-drawer-mask {
   backdrop-filter: blur(0.5rem);
   -webkit-backdrop-filter: blur(0.5rem);
 }
