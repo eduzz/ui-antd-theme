@@ -1,7 +1,7 @@
 {
   "name": "@eduzz/ui-antd-theme",
   "description": "Eduzz Hooks: Antd Theme",
-  "version": "1.0.7",
+  "version": "1.2.0-beta.0",
   "keywords": [
     "antd",
     "raect-hooks-forms",
