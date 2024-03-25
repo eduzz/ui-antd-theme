@@ -17,7 +17,7 @@ export default function createTheme(
       colorPrimary: primaryColor.startsWith('#')
         ? primaryColor
         : tokens.brands[primaryColor as BrandColor].primary.pure,
-      colorBgLayout: mode === 'light' ? tokens.base.light.background[3] : tokens.base.dark.background[3],
+      colorBgLayout: mode === 'light' ? tokens.base.light.surface.subtle : tokens.base.dark.surface.subtle,
       colorBgTextHover: mode === 'light' ? 'rgba(0, 0, 0, 0.03)' : 'rgba(255, 255, 255, 0.06)',
       fontFamily: tokens.font.family.base,
       fontSize: 16,
