@@ -32,39 +32,37 @@ const CssVariables = ({ brandColor }: CssVariablesProps) => {
         --eduzz-ui-antd-theme-split-color: ${token.colorSplit};
         --eduzz-ui-antd-theme-bg-color: ${token.colorBgLayout};
 
-        --eduzz-ui-antd-theme-background-color-1: ${hexToRgbVar(eduzzTokens.base.dark.background[1])};
-        --eduzz-ui-antd-theme-background-color-2: ${hexToRgbVar(eduzzTokens.base.dark.background[2])};
-        --eduzz-ui-antd-theme-background-color-3: ${hexToRgbVar(eduzzTokens.base.dark.background[3])};
-        --eduzz-ui-antd-theme-background-color-4: ${hexToRgbVar(eduzzTokens.base.dark.background[4])};
+        --eduzz-ui-antd-theme-surface-subtle: ${hexToRgbVar(eduzzTokens.base.light.surface.subtle)};
+        --eduzz-ui-antd-theme-surface-default: ${hexToRgbVar(eduzzTokens.base.light.surface.default)};
+        --eduzz-ui-antd-theme-surface-disabled: ${hexToRgbVar(eduzzTokens.base.light.surface.disabled)};
     
-        --eduzz-ui-antd-theme-outline-color-1: ${hexToRgbVar(eduzzTokens.base.dark.outline[1])};
-        --eduzz-ui-antd-theme-outline-color-2: ${hexToRgbVar(eduzzTokens.base.dark.outline[2])};
-        --eduzz-ui-antd-theme-outline-color-3: ${hexToRgbVar(eduzzTokens.base.dark.outline[3])};
+        --eduzz-ui-antd-theme-outline-default: ${hexToRgbVar(eduzzTokens.base.light.outline.default)};
+        --eduzz-ui-antd-theme-outline-disabled: ${hexToRgbVar(eduzzTokens.base.light.outline.disabled)};
+        --eduzz-ui-antd-theme-outline-darker: ${hexToRgbVar(eduzzTokens.base.light.outline.darker)};
     
-        --eduzz-ui-antd-theme-content-color-1: ${hexToRgbVar(eduzzTokens.base.dark.content[1])};
-        --eduzz-ui-antd-theme-content-color-2: ${hexToRgbVar(eduzzTokens.base.dark.content[2])};
-        --eduzz-ui-antd-theme-content-color-3: ${hexToRgbVar(eduzzTokens.base.dark.content[3])};
-        --eduzz-ui-antd-theme-content-color-4: ${hexToRgbVar(eduzzTokens.base.dark.content[4])};
-        --eduzz-ui-antd-theme-content-color-5: ${hexToRgbVar(eduzzTokens.base.dark.content[5])};
-        --eduzz-ui-antd-theme-content-color-6: ${hexToRgbVar(eduzzTokens.base.dark.content[6])};
+        --eduzz-ui-antd-theme-content-title: ${hexToRgbVar(eduzzTokens.base.light.content.title)};
+        --eduzz-ui-antd-theme-content-body: ${hexToRgbVar(eduzzTokens.base.light.content.body)};
+        --eduzz-ui-antd-theme-content-subtitle: ${hexToRgbVar(eduzzTokens.base.light.content.subtitle)};
+        --eduzz-ui-antd-theme-content-caption: ${hexToRgbVar(eduzzTokens.base.light.content.caption)};
+        --eduzz-ui-antd-theme-content-negative: ${hexToRgbVar(eduzzTokens.base.light.content.negative)};
+        --eduzz-ui-antd-theme-content-disabled: ${hexToRgbVar(eduzzTokens.base.light.content.disabled)};
       }
     
       body[data-eduzz-theme="dark"] {
-        --eduzz-ui-antd-theme-background-color-1: ${hexToRgbVar(eduzzTokens.base.light.background[1])};
-        --eduzz-ui-antd-theme-background-color-2: ${hexToRgbVar(eduzzTokens.base.light.background[2])};
-        --eduzz-ui-antd-theme-background-color-3: ${hexToRgbVar(eduzzTokens.base.light.background[3])};
-        --eduzz-ui-antd-theme-background-color-4: ${hexToRgbVar(eduzzTokens.base.light.background[4])};
+        --eduzz-ui-antd-theme-surface-subtle: ${hexToRgbVar(eduzzTokens.base.dark.surface.subtle)};
+        --eduzz-ui-antd-theme-surface-default: ${hexToRgbVar(eduzzTokens.base.dark.surface.default)};
+        --eduzz-ui-antd-theme-surface-disabled: ${hexToRgbVar(eduzzTokens.base.dark.surface.disabled)};
     
-        --eduzz-ui-antd-theme-outline-color-1: ${hexToRgbVar(eduzzTokens.base.light.outline[1])};
-        --eduzz-ui-antd-theme-outline-color-2: ${hexToRgbVar(eduzzTokens.base.light.outline[2])};
-        --eduzz-ui-antd-theme-outline-color-3: ${hexToRgbVar(eduzzTokens.base.light.outline[3])};
+        --eduzz-ui-antd-theme-outline-default: ${hexToRgbVar(eduzzTokens.base.dark.outline.default)};
+        --eduzz-ui-antd-theme-outline-disabled: ${hexToRgbVar(eduzzTokens.base.dark.outline.disabled)};
+        --eduzz-ui-antd-theme-outline-darker: ${hexToRgbVar(eduzzTokens.base.dark.outline.darker)};
     
-        --eduzz-ui-antd-theme-content-color-1: ${hexToRgbVar(eduzzTokens.base.light.content[1])};
-        --eduzz-ui-antd-theme-content-color-2: ${hexToRgbVar(eduzzTokens.base.light.content[2])};
-        --eduzz-ui-antd-theme-content-color-3: ${hexToRgbVar(eduzzTokens.base.light.content[3])};
-        --eduzz-ui-antd-theme-content-color-4: ${hexToRgbVar(eduzzTokens.base.light.content[4])};
-        --eduzz-ui-antd-theme-content-color-5: ${hexToRgbVar(eduzzTokens.base.light.content[5])};
-        --eduzz-ui-antd-theme-content-color-6: ${hexToRgbVar(eduzzTokens.base.light.content[6])};
+        --eduzz-ui-antd-theme-content-title: ${hexToRgbVar(eduzzTokens.base.dark.content.title)};
+        --eduzz-ui-antd-theme-content-body: ${hexToRgbVar(eduzzTokens.base.dark.content.body)};
+        --eduzz-ui-antd-theme-content-subtitle: ${hexToRgbVar(eduzzTokens.base.dark.content.subtitle)};
+        --eduzz-ui-antd-theme-content-caption: ${hexToRgbVar(eduzzTokens.base.dark.content.caption)};
+        --eduzz-ui-antd-theme-content-negative: ${hexToRgbVar(eduzzTokens.base.dark.content.negative)};
+        --eduzz-ui-antd-theme-content-disabled: ${hexToRgbVar(eduzzTokens.base.dark.content.disabled)};
       }
     `,
     [token]

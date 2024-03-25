@@ -1,7 +1,7 @@
 {
   "name": "@eduzz/ui-antd-theme",
   "description": "Eduzz Hooks: Antd Theme",
-  "version": "1.2.0-beta.0",
+  "version": "1.2.0-beta.1",
   "keywords": [
     "antd",
     "raect-hooks-forms",
@@ -31,12 +31,11 @@
     "update-deps": "yarn ncu -u"
   },
   "dependencies": {
-    "@eduzz/ui-tokens": "^1.1.0",
+    "@eduzz/ui-tokens": "^1.2.2",
     "antd": "^5"
   },
   "peerDependencies": {
-    "antd": "^5",
-    "@eduzz/ui-tokens": "^1.1.0"
+    "antd": "^5"
   },
   "devDependencies": {
     "@eduzz/eslint-config": "^1.0.0",
