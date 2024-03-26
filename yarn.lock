@@ -81,10 +81,10 @@
   resolved "https://registry.yarnpkg.com/@eduzz/eslint-config/-/eslint-config-1.0.0.tgz#97180c2b37e1be93977f91725e4e9759cd3422b3"
   integrity sha512-Q2PMV1ddPI6ECdOpCiaAf4UxVo4Sf4usImvGRfQybDKzMDxUPHEocIMRjUe8ULPNfAnaV9Zgw20oGtUEUhkACg==
 
-"@eduzz/ui-tokens@^1":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@eduzz/ui-tokens/-/ui-tokens-1.0.0.tgz#da5db932d13930836d060f6ad63ac813914293ba"
-  integrity sha512-ID+t8nb2+ahQRO8IbuwcIhr9rWNKTKTj95zzaW9D6YKrP2J8GHdawlwaccDnPjhd2zP89GU7lgoB31uyZ/kgkQ==
+"@eduzz/ui-tokens@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@eduzz/ui-tokens/-/ui-tokens-1.2.2.tgz#1345a871141df1dbe1e2efdaa36e149289b1bff1"
+  integrity sha512-PX74zMDDlvLCrwvjbAWHl4A1JKqfMUk2Ss45VUBQ1sZg8/ZoGObYoV8K4QTQmOuDClEaLGjnp1OlU7IsdtdDaw==
 
 "@emotion/hash@^0.8.0":
   version "0.8.0"

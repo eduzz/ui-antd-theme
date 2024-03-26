@@ -58,6 +58,24 @@ const ThemeProvider = ({
     return () => mediaDark.removeEventListener('change', listner);
   }, [modeProp]);
 
+  useEffect(() => {
+    const themeChangeObserver = new MutationObserver(mutations => {
+      mutations.forEach(mutation => {
+        if (mutation.attributeName !== 'data-eduzz-theme') {
+          return;
+        }
+
+        const attributes = (mutation.target as HTMLElement).attributes;
+        const currentTheme = attributes.getNamedItem('data-eduzz-theme')?.value as 'light' | 'dark';
+
+        setMode(currentTheme ?? 'light');
+      });
+    });
+
+    themeChangeObserver.observe(document.body, { attributes: true });
+    return () => themeChangeObserver.disconnect();
+  }, []);
+
   return (
     <ConfigProvider theme={theme} componentSize='large' locale={antdLocalePtBR} {...configProps}>
       <App>
