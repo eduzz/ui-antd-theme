@@ -6,8 +6,6 @@ import { App, ConfigProvider } from 'antd';
 import type { ConfigProviderProps } from 'antd/es/config-provider';
 import antdLocalePtBR from 'antd/locale/pt_BR';
 
-import tokens from '@eduzz/ui-tokens';
-
 import { AppBinder } from '.';
 import createTheme, { BrandColor } from './createTheme';
 import CssVariables from './CssVariables';
@@ -45,7 +43,7 @@ const ThemeProvider = ({
     !enableAnimation && document.body.classList.add('eduzz-ui-disable-animation');
 
     return createTheme(
-      mode === 'light' ? brandColor : brandColorDark ?? tokens.brands.eduzz.secondary.pure,
+      mode === 'light' ? brandColor : brandColorDark ?? '#eab208',
       mode ?? 'light',
       enableAnimation ?? false
     );
