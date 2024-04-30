@@ -6,6 +6,8 @@ import { App, ConfigProvider } from 'antd';
 import type { ConfigProviderProps } from 'antd/es/config-provider';
 import antdLocalePtBR from 'antd/locale/pt_BR';
 
+import tokens from '@eduzz/ui-tokens';
+
 import { AppBinder } from '.';
 import createTheme, { BrandColor } from './createTheme';
 import CssVariables from './CssVariables';
@@ -43,7 +45,7 @@ const ThemeProvider = ({
     !enableAnimation && document.body.classList.add('eduzz-ui-disable-animation');
 
     return createTheme(
-      mode === 'light' ? brandColor : brandColorDark ?? brandColor,
+      mode === 'light' ? brandColor : brandColorDark ?? tokens.brands.eduzz.secondary.pure,
       mode ?? 'light',
       enableAnimation ?? false
     );
@@ -53,9 +55,9 @@ const ThemeProvider = ({
     if (modeProp !== 'system') return setMode(modeProp ?? 'light');
     if (!mediaDark) return setMode('light');
 
-    const listner = (event: MediaQueryListEvent) => setMode(() => (event.matches ? 'dark' : 'light'));
-    mediaDark.addEventListener('change', listner);
-    return () => mediaDark.removeEventListener('change', listner);
+    const listener = (event: MediaQueryListEvent) => setMode(() => (event.matches ? 'dark' : 'light'));
+    mediaDark.addEventListener('change', listener);
+    return () => mediaDark.removeEventListener('change', listener);
   }, [modeProp]);
 
   useEffect(() => {
