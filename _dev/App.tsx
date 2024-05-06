@@ -15,7 +15,7 @@ function App() {
             <Input />
           </Form.Item>
         </Form>
-        <Button>Teste</Button>
+        <Button type='primary'>Teste</Button>
       </div>
     </ThemeProvider>
   );
