@@ -1,10 +1,10 @@
 {
   "name": "@eduzz/ui-antd-theme",
   "description": "Eduzz Hooks: Antd Theme",
-  "version": "1.2.0",
+  "version": "2.0.0-beta.1",
   "keywords": [
     "antd",
-    "raect-hooks-forms",
+    "react-hooks-forms",
     "react",
     "eduzz"
   ],
@@ -31,7 +31,7 @@
     "update-deps": "yarn ncu -u"
   },
   "dependencies": {
-    "@eduzz/ui-tokens": "^1.2.2",
+    "@eduzz/ui-tokens": "^1.2.3",
     "antd": "^5"
   },
   "peerDependencies": {
