@@ -13,6 +13,51 @@ body {
   background-color: var(--eduzz-ui-antd-theme-bg-color) !important
 }
 
+.ant-form-vertical .ant-form-item-label,
+.ant-col-24.ant-form-item-label {
+  padding-bottom: 0.25rem !important;
+}
+
+.ant-form-vertical .ant-form-item-label>label {
+  font-size: 1rem !important;
+  height: auto !important;
+}
+
+/* alert with title */
+.ant-alert-with-description .ant-alert-message {
+  margin-bottom: 0px;
+}
+
+.ant-form-vertical .ant-form-item-explain-error {
+  font-size: 0.8rem !important;
+}
+
+/* table head */
+.ant-table-wrapper .ant-table-thead>tr>th {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* button */
+.ant-btn-primary {
+  box-shadow: none;
+}
+
+.ant-upload {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.ant-modal-confirm-btns button:disabled.ant-btn-primary:not(.ant-btn-dangerous) {
+  background-color: rgb(var(--eduzz-ui-layout-content-title) / 0.04) !important;
+}
+
+.ant-input-show-count-suffix,
+.ant-input-data-count {
+  @apply !text-xs
+}
+
 /* fix search input height */
 .ant-input-search-large>.ant-input-group>.ant-input {
   height: 40px;
@@ -101,6 +146,15 @@ body {
   box-shadow: none;
 }
 
+.eduzz-ui-dark-theme .ant-tooltip {
+  --antd-arrow-background-color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.eduzz-ui-dark-theme .ant-tooltip-inner {
+  color: #000 !important;
+  background-color: rgba(255, 255, 255, 0.85) !important;
+}
+
 /* disable animation */
 .eduzz-ui-disable-animation .ant-wave {
   display: none;
@@ -116,4 +170,42 @@ body {
 
 .eduzz-ui-disable-animation .ant-modal-mask.ant-fade-leave+.ant-modal-wrap {
   pointer-events: none;
+}
+
+h1.ant-typography {
+  font-size: 2.375rem;
+  line-height: 2.875rem;
+  font-weight: 700;
+}
+
+h2.ant-typography {
+  font-size: 1.875rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+}
+
+h3.ant-typography {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+h4.ant-typography {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+}
+
+h5.ant-typography {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+}
+
+[data-eduzz-theme="dark"] {
+  color-scheme: dark;
+}
+
+[data-eduzz-theme="light"] {
+  color-scheme: light;
 }
